@@ -14,3 +14,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+window.addEventListener('visibilitychange', () => {
+    const temaCookie = getCookie("tema");
+    if (temaCookie) {
+        if (temaCookie === "dark") {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        } else if (temaCookie === "light") {
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+        }
+    }
+});
